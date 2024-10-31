@@ -1,5 +1,5 @@
 import cv2
-from data_augmentation.Data_Augmentation import YOLODataAugmentation
+from data_augmentation.augmentation import YOLODataAugmentation
 from configs.config import *
 
 if __name__ == "__main__":
@@ -19,7 +19,12 @@ if __name__ == "__main__":
         "scale_fy": SCALE_FY,
         "x_shift": X_SHIFT,
         "y_shift": Y_SHIFT,
-        "ksize": KSIZE
+        "ksize": KSIZE,
+        "crop_size": CROP_SIZE,
+        "erase_area_ratio": ERASE_AREA_RATIO,
+        "cutmix_alpha": CUTMIX_ALPHA,
+        "mixup_alpha": MIXUP_ALPHA,
+        "paste_size": PASTE_SIZE
     })
 
     for title, image in augmented_images.items():
